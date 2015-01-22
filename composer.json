@@ -1,0 +1,22 @@
+{
+    "name": "omnilight/yii2-many-many-relation",
+    "description": "Behavior for Yii2 that simplify managing many-many relations via forms",
+    "keywords": ["yii2", "relation", "many"],
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Pavel Agalecky",
+            "email": "pavel.agalecky@gmail.com"
+        }
+    ],
+    "type": "yii2-extension",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "omnilight\\behaviors\\": ""
+        }
+    }
+}
