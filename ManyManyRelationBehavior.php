@@ -53,7 +53,16 @@ class ManyManyRelationBehavior extends Behavior
     {
         if ($name == $this->propertyName)
             return $this->getRelationIds();
-        return parent::__get($name);
+        else
+            return parent::__get($name);
+    }
+
+    public function __set($name, $value)
+    {
+        if ($name == $this->propertyName)
+            $this->setRelationIds($value);
+        else
+            parent::__set($name, $value);
     }
 
 
