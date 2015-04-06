@@ -104,7 +104,9 @@ class ManyManyRelationBehavior extends Behavior
         $rows = [];
 
         foreach ($this->_relationIds as $relatedId) {
-            $rows[] = [$owner->getPrimaryKey(), $relatedId];
+            if (!empty($relatedId)) {
+                $rows[] = [$owner->getPrimaryKey(), $relatedId];
+            }
         }
 
         if (!empty($rows)) {
