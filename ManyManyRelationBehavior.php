@@ -69,7 +69,7 @@ class ManyManyRelationBehavior extends Behavior
     public function getRelationIds()
     {
         if (!$this->owner->getIsNewRecord() && $this->_relationIds === null) {
-            $this->populateRegionsIds();
+            $this->populateRelationIds();
         }
 
         return $this->_relationIds === null ? [] : $this->_relationIds;
@@ -80,7 +80,7 @@ class ManyManyRelationBehavior extends Behavior
         $this->_relationIds = (array)$relationIds;
     }
 
-    protected function populateRegionsIds()
+    protected function populateRelationIds()
     {
         $this->_relationIds = [];
         foreach ($this->owner->{$this->relationName} as $region) {
