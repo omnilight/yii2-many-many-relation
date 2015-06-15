@@ -77,7 +77,7 @@ class ManyManyRelationBehavior extends Behavior
 
     public function setRelationIds($relationIds)
     {
-        $this->_relationIds = $relationIds;
+        $this->_relationIds = empty($relationIds) ? [] : $relationIds;
     }
 
     protected function populateRelationIds()
